@@ -17,5 +17,8 @@ fn custom_and_official_release_interoperate() {
         .arg(env!("CARGO_BIN_EXE_herdr"))
         .status()
         .expect("start the isolated compatibility test");
-    assert!(status.success(), "official/custom compatibility test failed");
+    assert!(
+        status.success(),
+        "official/custom compatibility test failed"
+    );
 }
